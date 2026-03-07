@@ -1099,107 +1099,336 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* WORKFLOW */}
-      <section
-        id="workflow"
-        className="home-section"
-        style={{ padding: "86px 6%", background: "#fff" }}
-      >
-        <div style={{ textAlign: "center", marginBottom: 54 }}>
+     {/* WORKFLOW */}
+<section
+  id="workflow"
+  className="home-section"
+  style={{
+    padding: "96px 6%",
+    background: "linear-gradient(180deg,#ffffff 0%,#f8fbff 100%)",
+    position: "relative",
+    overflow: "hidden",
+  }}
+>
+  <div
+    style={{
+      position: "absolute",
+      top: 0,
+      left: "10%",
+      width: 260,
+      height: 260,
+      borderRadius: "50%",
+      background: "radial-gradient(circle,rgba(29,78,216,.08),transparent 70%)",
+      filter: "blur(20px)",
+    }}
+  />
+  <div
+    style={{
+      position: "absolute",
+      bottom: 0,
+      right: "8%",
+      width: 260,
+      height: 260,
+      borderRadius: "50%",
+      background: "radial-gradient(circle,rgba(16,185,129,.08),transparent 70%)",
+      filter: "blur(20px)",
+    }}
+  />
+
+  <div style={{ textAlign: "center", marginBottom: 70, position: "relative", zIndex: 2 }}>
+    <div
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 8,
+        background: "#eff6ff",
+        color: "#1d4ed8",
+        borderRadius: 50,
+        padding: "8px 18px",
+        fontSize: 12,
+        fontWeight: 800,
+        letterSpacing: 0.5,
+        textTransform: "uppercase",
+        marginBottom: 18,
+      }}
+    >
+      Smart Workflow
+    </div>
+
+    <h2
+      style={{
+        fontFamily: "'Playfair Display',serif",
+        fontSize: 46,
+        fontWeight: 900,
+        color: "#0f172a",
+        marginBottom: 14,
+      }}
+    >
+      How Medtrix Works
+    </h2>
+
+    <p
+      style={{
+        color: "#64748b",
+        fontSize: 18,
+        maxWidth: 700,
+        margin: "0 auto",
+        lineHeight: 1.8,
+      }}
+    >
+      An intelligent end-to-end workflow that transforms raw clinical information into
+      ranked, explainable trial matches for faster recruitment.
+    </p>
+  </div>
+
+  <div
+    className="timeline-wrapper"
+    style={{
+      position: "relative",
+      maxWidth: 1200,
+      margin: "0 auto",
+      zIndex: 2,
+    }}
+  >
+    {/* center line */}
+    <div
+      className="timeline-line"
+      style={{
+        position: "absolute",
+        top: 0,
+        bottom: 0,
+        left: "50%",
+        transform: "translateX(-50%)",
+        width: 6,
+        borderRadius: 10,
+        background: "linear-gradient(180deg,#1d4ed8 0%,#0891b2 50%,#10b981 100%)",
+        boxShadow: "0 0 24px rgba(29,78,216,.18)",
+      }}
+    />
+
+    {workflow.map((item, i) => {
+      const isLeft = i % 2 === 0;
+
+      return (
+        <div
+          key={i}
+          className="timeline-row"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 90px 1fr",
+            alignItems: "center",
+            marginBottom: 42,
+            position: "relative",
+          }}
+        >
+          {/* LEFT SIDE */}
           <div
             style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
-              background: "#eff6ff",
-              color: "#1d4ed8",
-              borderRadius: 50,
-              padding: "8px 18px",
-              fontSize: 12,
-              fontWeight: 800,
-              letterSpacing: 0.5,
-              textTransform: "uppercase",
-              marginBottom: 18,
+              display: "flex",
+              justifyContent: isLeft ? "flex-end" : "flex-start",
+              opacity: isLeft ? 1 : 0.18,
+              pointerEvents: isLeft ? "auto" : "none",
             }}
           >
-            Smart Workflow
+            {isLeft && (
+              <div
+                className="timeline-card"
+                style={{
+                  width: "92%",
+                  background: "rgba(255,255,255,.95)",
+                  border: "1px solid #e2e8f0",
+                  borderRadius: 22,
+                  padding: "24px 24px 22px",
+                  boxShadow: "0 18px 40px rgba(15,23,42,.08)",
+                  position: "relative",
+                  overflow: "hidden",
+                }}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    height: 4,
+                    background: `linear-gradient(90deg, ${item.color}, transparent)`,
+                  }}
+                />
+
+                <div
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 10,
+                    marginBottom: 14,
+                  }}
+                >
+                  <div
+                    style={{
+                      width: 56,
+                      height: 56,
+                      borderRadius: 16,
+                      display: "grid",
+                      placeItems: "center",
+                      fontSize: 24,
+                      background: `${item.color}18`,
+                      border: `1px solid ${item.color}33`,
+                    }}
+                  >
+                    {item.icon}
+                  </div>
+
+                  <div>
+                    <div
+                      style={{
+                        fontSize: 12,
+                        fontWeight: 800,
+                        color: item.color,
+                        letterSpacing: 1,
+                      }}
+                    >
+                      STEP {item.step}
+                    </div>
+                    <h3
+                      style={{
+                        fontSize: 22,
+                        fontWeight: 800,
+                        color: "#0f172a",
+                        marginTop: 4,
+                      }}
+                    >
+                      {item.title}
+                    </h3>
+                  </div>
+                </div>
+
+                <p style={{ color: "#64748b", lineHeight: 1.8, fontSize: 14.5 }}>
+                  {item.desc}
+                </p>
+              </div>
+            )}
           </div>
 
-          <h2
+          {/* MIDDLE NODE */}
+          <div
             style={{
-              fontFamily: "'Playfair Display',serif",
-              fontSize: 46,
-              fontWeight: 900,
-              color: "#0f172a",
-              marginBottom: 14,
+              display: "flex",
+              justifyContent: "center",
+              position: "relative",
+              zIndex: 3,
             }}
           >
-            How Medtrix Works
-          </h2>
-
-          <p style={{ color: "#64748b", fontSize: 18, maxWidth: 660, margin: "0 auto" }}>
-            A complete AI-assisted pipeline from patient upload to final researcher review.
-          </p>
-        </div>
-
-        <div
-          className="home-workflow-grid"
-          style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 22 }}
-        >
-          {workflow.map((item, i) => (
             <div
-              key={i}
-              className="dash-card"
               style={{
-                padding: "28px 24px",
-                position: "relative",
-                overflow: "hidden",
+                width: 70,
+                height: 70,
+                borderRadius: "50%",
+                background: "linear-gradient(135deg,#ffffff,#eff6ff)",
+                border: `4px solid ${item.color}`,
+                boxShadow: `0 0 0 8px ${item.color}18, 0 10px 30px rgba(15,23,42,.12)`,
+                display: "grid",
+                placeItems: "center",
+                fontSize: 24,
+                fontWeight: 900,
+                color: item.color,
               }}
             >
-              <div
-                style={{
-                  position: "absolute",
-                  top: 16,
-                  right: 18,
-                  fontSize: 42,
-                  fontWeight: 900,
-                  color: "rgba(15,23,42,.05)",
-                }}
-              >
-                {item.step}
-              </div>
-
-              <div
-                style={{
-                  width: 58,
-                  height: 58,
-                  borderRadius: 16,
-                  display: "grid",
-                  placeItems: "center",
-                  fontSize: 26,
-                  background: `${item.color}18`,
-                  marginBottom: 18,
-                }}
-              >
-                {item.icon}
-              </div>
-
-              <h3
-                style={{
-                  fontSize: 20,
-                  fontWeight: 800,
-                  color: "#0f172a",
-                  marginBottom: 10,
-                }}
-              >
-                {item.title}
-              </h3>
-
-              <p style={{ color: "#64748b", lineHeight: 1.8, fontSize: 14.5 }}>{item.desc}</p>
+              {item.icon}
             </div>
-          ))}
+          </div>
+
+          {/* RIGHT SIDE */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: !isLeft ? "flex-start" : "flex-end",
+              opacity: !isLeft ? 1 : 0.18,
+              pointerEvents: !isLeft ? "auto" : "none",
+            }}
+          >
+            {!isLeft && (
+              <div
+                className="timeline-card"
+                style={{
+                  width: "92%",
+                  background: "rgba(255,255,255,.95)",
+                  border: "1px solid #e2e8f0",
+                  borderRadius: 22,
+                  padding: "24px 24px 22px",
+                  boxShadow: "0 18px 40px rgba(15,23,42,.08)",
+                  position: "relative",
+                  overflow: "hidden",
+                }}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    height: 4,
+                    background: `linear-gradient(90deg, ${item.color}, transparent)`,
+                  }}
+                />
+
+                <div
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 10,
+                    marginBottom: 14,
+                  }}
+                >
+                  <div
+                    style={{
+                      width: 56,
+                      height: 56,
+                      borderRadius: 16,
+                      display: "grid",
+                      placeItems: "center",
+                      fontSize: 24,
+                      background: `${item.color}18`,
+                      border: `1px solid ${item.color}33`,
+                    }}
+                  >
+                    {item.icon}
+                  </div>
+
+                  <div>
+                    <div
+                      style={{
+                        fontSize: 12,
+                        fontWeight: 800,
+                        color: item.color,
+                        letterSpacing: 1,
+                      }}
+                    >
+                      STEP {item.step}
+                    </div>
+                    <h3
+                      style={{
+                        fontSize: 22,
+                        fontWeight: 800,
+                        color: "#0f172a",
+                        marginTop: 4,
+                      }}
+                    >
+                      {item.title}
+                    </h3>
+                  </div>
+                </div>
+
+                <p style={{ color: "#64748b", lineHeight: 1.8, fontSize: 14.5 }}>
+                  {item.desc}
+                </p>
+              </div>
+            )}
+          </div>
         </div>
-      </section>
+      );
+    })}
+  </div>
+</section>
 
       {/* DASHBOARD PREVIEW SECTION */}
       <section className="home-section" style={{ padding: "86px 6%", background: "#f8fbff" }}>

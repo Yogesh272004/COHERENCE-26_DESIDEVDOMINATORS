@@ -37,6 +37,28 @@ const getTrialById = async (req, res) => {
   }
 };
 
+const deleteTrial = async (req, res) => {
+  try {
+    const trial = await Trial.findById(req.params.id);
+
+    if (!trial) {
+      return res.status(404).json({ message: "Trial not found" });
+    }
+
+    await Trial.findByIdAndDelete(req.params.id);
+
+    // Optional but recommended:
+    // delete related reports also so old deleted trial data does not remain
+    const Report = require("../models/Report");
+    await Report.deleteMany({ trial: req.params.id });
+
+    res.json({ message: "Trial deleted successfully" });
+  } catch (error) {
+    console.error("DELETE TRIAL ERROR:", error);
+    res.status(500).json({ message: error.message });
+  }
+};
+
 const getMatchingPatientsForTrial = async (req, res) => {
   try {
     const trial = await Trial.findById(req.params.id);
@@ -51,8 +73,11 @@ const getMatchingPatientsForTrial = async (req, res) => {
     for (const patient of patients) {
       const matchResult = matchTrialWithPatient(patient, trial);
 
-      // only include eligible patients
-      if (matchResult.status === "Eligible") {
+      // show both eligible and maybe eligible
+      if (
+        matchResult.status === "Eligible" ||
+        matchResult.status === "Maybe Eligible"
+      ) {
         results.push({
           patient,
           status: matchResult.status,
@@ -75,5 +100,6 @@ module.exports = {
   createTrial,
   getTrials,
   getTrialById,
-  getMatchingPatientsForTrial
+  getMatchingPatientsForTrial,
+  deleteTrial
 };

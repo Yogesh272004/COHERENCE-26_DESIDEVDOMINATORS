@@ -4,12 +4,14 @@ const {
   createTrial,
   getTrials,
   getTrialById,
-  getMatchingPatientsForTrial
+  getMatchingPatientsForTrial,
+  deleteTrial
 } = require("../controllers/trialController");
 
 router.post("/", createTrial);
 router.get("/", getTrials);
 router.get("/:id", getTrialById);
 router.get("/:id/matches", getMatchingPatientsForTrial);
+router.delete("/:id", deleteTrial);
 
 module.exports = router;

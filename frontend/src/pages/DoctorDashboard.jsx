@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+import axios from "axios";
 import { addPatient, getPatients } from "../services/patientService";
 import { getTrialMatches, getTrials } from "../services/trialService";
 import { createReport, getReports } from "../services/reportService";
@@ -27,6 +28,11 @@ export default function DoctorDashboard() {
     medicalHistory: "",
     notes: ""
   });
+
+  // PDF upload states
+  const [pdfFile, setPdfFile] = useState(null);
+  const [parsedPatient, setParsedPatient] = useState(null);
+  const [autoMatches, setAutoMatches] = useState([]);
 
   useEffect(() => {
     loadData();
@@ -127,6 +133,38 @@ export default function DoctorDashboard() {
     } catch (error) {
       console.error("SEND REPORT ERROR:", error);
       alert("Failed to send report");
+    }
+  };
+
+  const handlePdfUpload = async () => {
+    try {
+      if (!pdfFile) {
+        alert("Please select a PDF file");
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append("report", pdfFile);
+
+      const res = await axios.post(
+        "http://localhost:5000/api/pdf-upload/upload-pdf",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data"
+          }
+        }
+      );
+
+      setParsedPatient(res.data.patient);
+      setAutoMatches(res.data.eligibleMatches || []);
+
+      await loadData();
+      setActiveTab("patients");
+      alert("PDF parsed and patient saved successfully");
+    } catch (error) {
+      console.error("PDF UPLOAD ERROR:", error);
+      alert("Failed to upload PDF");
     }
   };
 
@@ -238,6 +276,56 @@ export default function DoctorDashboard() {
                       Add Patient
                     </button>
                   </form>
+                </div>
+
+                <div className="doctor-panel">
+                  <h3 className="panel-title">Upload Patient Report PDF</h3>
+
+                  <input
+                    type="file"
+                    accept=".pdf"
+                    onChange={(e) => setPdfFile(e.target.files[0])}
+                    style={{
+                      width: "100%",
+                      padding: "12px",
+                      borderRadius: "10px",
+                      border: "1px solid #dbe3ef",
+                      marginTop: "10px",
+                      background: "#fff"
+                    }}
+                  />
+
+                  <button
+                    className="save-btn"
+                    style={{ marginTop: "14px" }}
+                    onClick={handlePdfUpload}
+                  >
+                    Upload PDF & Parse
+                  </button>
+
+                  {parsedPatient && (
+                    <div className="reasons-box" style={{ marginTop: "18px" }}>
+                      <p><strong>Parsed Patient Data</strong></p>
+                      <p><strong>Name:</strong> {parsedPatient.name}</p>
+                      <p><strong>Age:</strong> {parsedPatient.age}</p>
+                      <p><strong>Disease:</strong> {parsedPatient.disease}</p>
+                      <p><strong>Location:</strong> {parsedPatient.location}</p>
+                      <p><strong>Patient ID:</strong> {parsedPatient.patientCode || "Generated"}</p>
+                    </div>
+                  )}
+
+                  {autoMatches.length > 0 && (
+                    <div className="reasons-box" style={{ marginTop: "18px" }}>
+                      <p><strong>Eligible Trials Found</strong></p>
+                      <ul>
+                        {autoMatches.map((m, i) => (
+                          <li key={i}>
+                            {m.trialTitle} — Score: {m.score}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </div>
 
