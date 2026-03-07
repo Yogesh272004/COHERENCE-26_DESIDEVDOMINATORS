@@ -1,0 +1,121 @@
+patientCode,name,age,disease,gender,location,hbA1c,smoking,medicalHistory,notes
+PAT-1001,Ravi Gupta,36,Diabetes,other,Hyderabad,7.2,true,hypertension; smoker,Currently on oral medication regimen
+PAT-1002,Aditya Mishra,62,Diabetes,male,Mumbai,6.5,false,,Currently on oral medication regimen
+PAT-1003,Reyansh Iyer,61,Diabetes,male,Nagpur,8.7,false,,Follow-up advised for glycemic control
+PAT-1004,Pooja Khan,56,Diabetes,female,Delhi,7.0,false,hypertension,Type 2 diabetes under active monitoring
+PAT-1005,Aadhya Gupta,57,Diabetes,female,Hyderabad,9.7,false,hypertension,Requires periodic HbA1c review
+PAT-1006,Aditya Iyer,53,Diabetes,other,Chennai,8.6,false,,Follow-up advised for glycemic control
+PAT-1007,Rahul Pawar,40,Diabetes,male,Pune,7.8,false,neuropathy,Follow-up advised for glycemic control
+PAT-1008,Diya Deshmukh,48,Diabetes,other,Hyderabad,9.2,false,hypertension,Currently on oral medication regimen
+PAT-1009,Ravi Yadav,69,Diabetes,other,Bengaluru,6.8,false,heart disease,Stable diabetes management plan
+PAT-1010,Karan Sharma,49,Diabetes,male,Chennai,7.9,true,neuropathy; smoker,Follow-up advised for glycemic control
+PAT-1011,Ravi Reddy,60,Diabetes,other,Nagpur,6.7,true,kidney disease; smoker,Currently on oral medication regimen
+PAT-1012,Myra Mishra,60,Diabetes,female,Bengaluru,10.5,true,hypertension; obesity; smoker,Type 2 diabetes under active monitoring
+PAT-1013,Rahul Sharma,42,Diabetes,male,Delhi,9.6,false,hypertension,Requires periodic HbA1c review
+PAT-1014,Aadhya Chavan,64,Diabetes,other,Hyderabad,10.4,false,,Type 2 diabetes under active monitoring
+PAT-1015,Amit Iyer,52,Diabetes,other,Chennai,6.6,false,hypertension; obesity,Type 2 diabetes under active monitoring
+PAT-1016,Sneha Joshi,67,Diabetes,male,Pune,9.9,false,heart disease,Follow-up advised for glycemic control
+PAT-1017,Diya Yadav,69,Diabetes,other,Mumbai,8.7,false,hypertension,Stable diabetes management plan
+PAT-1018,Suresh Pawar,50,Diabetes,male,Bengaluru,10.0,false,hypertension,Requires periodic HbA1c review
+PAT-1019,Karan Singh,69,Diabetes,male,Delhi,9.0,false,obesity,Stable diabetes management plan
+PAT-1020,Kiara Chavan,62,Diabetes,male,Bengaluru,9.2,false,neuropathy,Requires periodic HbA1c review
+PAT-1021,Suresh Nair,63,Diabetes,male,Bengaluru,7.1,false,heart disease,Currently on oral medication regimen
+PAT-1022,Krishna Patil,39,Diabetes,other,Mumbai,7.1,false,neuropathy,Type 2 diabetes under active monitoring
+PAT-1023,Kiara Verma,52,Diabetes,other,Nagpur,7.0,true,hypertension; obesity; smoker,Follow-up advised for glycemic control
+PAT-1024,Neha Reddy,61,Diabetes,male,Pune,6.5,false,retinopathy,Requires periodic HbA1c review
+PAT-1025,Ira Sharma,41,Diabetes,male,Ahmedabad,9.3,false,hypertension,Follow-up advised for glycemic control
+PAT-1026,Reyansh Kulkarni,69,Diabetes,female,Delhi,8.0,false,heart disease,Type 2 diabetes under active monitoring
+PAT-1027,Ira Iyer,41,Diabetes,male,Mumbai,10.4,false,heart disease,Follow-up advised for glycemic control
+PAT-1028,Myra Reddy,65,Diabetes,male,Ahmedabad,10.1,true,smoker,Requires periodic HbA1c review
+PAT-1029,Ishaan Shaikh,53,Diabetes,female,Nagpur,6.8,false,,Currently on oral medication regimen
+PAT-1030,Sneha Iyer,38,Diabetes,other,Chennai,6.4,false,obesity,Type 2 diabetes under active monitoring
+PAT-1031,Kiara Singh,46,Diabetes,male,Pune,9.1,false,hypertension,Currently on oral medication regimen
+PAT-1032,Krishna Mishra,37,Diabetes,other,Pune,7.9,false,neuropathy,Stable diabetes management plan
+PAT-1033,Reyansh Shinde,50,Diabetes,female,Ahmedabad,6.7,false,hypertension; obesity,Stable diabetes management plan
+PAT-1034,Priya Singh,35,Diabetes,female,Pune,6.4,true,kidney disease; smoker,Follow-up advised for glycemic control
+PAT-1035,Priya Deshmukh,39,Diabetes,male,Chennai,7.4,false,kidney disease,Currently on oral medication regimen
+PAT-1036,Neha Nair,35,Diabetes,other,Hyderabad,10.2,true,obesity; smoker,Stable diabetes management plan
+PAT-1037,Vihaan Gupta,70,Diabetes,male,Hyderabad,7.3,true,neuropathy; smoker,Follow-up advised for glycemic control
+PAT-1038,Amit Joshi,67,Diabetes,female,Hyderabad,10.1,false,hypertension,Requires periodic HbA1c review
+PAT-1039,Karan Joshi,37,Diabetes,male,Chennai,9.5,false,kidney disease,Follow-up advised for glycemic control
+PAT-1040,Sneha Shaikh,70,Diabetes,other,Ahmedabad,8.6,true,obesity; smoker,Currently on oral medication regimen
+PAT-1041,Vivaan Deshmukh,72,Diabetes,other,Delhi,8.0,true,neuropathy; smoker,Type 2 diabetes under active monitoring
+PAT-1042,Suresh Deshmukh,48,Diabetes,other,Bengaluru,9.0,false,retinopathy,Currently on oral medication regimen
+PAT-1043,Sneha Jadhav,50,Diabetes,male,Delhi,10.0,true,neuropathy; smoker,Requires periodic HbA1c review
+PAT-1044,Neha Verma,52,Diabetes,male,Pune,7.8,true,hypertension; obesity; smoker,Follow-up advised for glycemic control
+PAT-1045,Reyansh Shaikh,57,Diabetes,female,Bengaluru,7.1,false,retinopathy,Stable diabetes management plan
+PAT-1046,Ishaan Singh,52,Diabetes,female,Ahmedabad,9.1,false,neuropathy,Type 2 diabetes under active monitoring
+PAT-1047,Vihaan Joshi,46,Diabetes,other,Hyderabad,6.3,false,neuropathy,Stable diabetes management plan
+PAT-1048,Myra Chavan,67,Diabetes,male,Ahmedabad,10.1,true,smoker,Requires periodic HbA1c review
+PAT-1049,Aarav Nair,69,Diabetes,other,Bengaluru,7.7,true,neuropathy; smoker,Currently on oral medication regimen
+PAT-1050,Anaya Gupta,54,Diabetes,other,Hyderabad,9.0,false,kidney disease,Currently on oral medication regimen
+PAT-1051,Arjun Kulkarni,61,Diabetes,other,Ahmedabad,9.1,false,kidney disease,Requires periodic HbA1c review
+PAT-1052,Anika Patil,54,Diabetes,female,Bengaluru,8.0,false,neuropathy,Requires periodic HbA1c review
+PAT-1053,Ira Shaikh,48,Diabetes,other,Nagpur,9.6,false,obesity,Type 2 diabetes under active monitoring
+PAT-1054,Atharv Nair,56,Diabetes,male,Bengaluru,9.1,false,heart disease,Follow-up advised for glycemic control
+PAT-1055,Aarav Sharma,50,Diabetes,female,Pune,8.1,false,heart disease,Requires periodic HbA1c review
+PAT-1056,Saanvi More,50,Diabetes,male,Mumbai,10.0,false,hypertension,Requires periodic HbA1c review
+PAT-1057,Krishna Yadav,68,Diabetes,female,Mumbai,8.6,false,hypertension,Requires periodic HbA1c review
+PAT-1058,Arjun Shaikh,68,Diabetes,other,Chennai,10.3,false,retinopathy,Currently on oral medication regimen
+PAT-1059,Ira Yadav,65,Diabetes,female,Hyderabad,9.4,false,kidney disease,Currently on oral medication regimen
+PAT-1060,Saanvi Verma,52,Diabetes,female,Pune,9.2,false,neuropathy,Stable diabetes management plan
+PAT-1061,Suresh Iyer,29,Cancer,male,Delhi,,false,hypertension,Family counselling completed
+PAT-1062,Myra Shinde,58,Cancer,female,Ahmedabad,5.2,false,heart disease,Needs imaging update before enrollment
+PAT-1063,Pooja Patil,72,Cancer,other,Ahmedabad,6.8,false,chemotherapy history,Family counselling completed
+PAT-1064,Anika Iyer,75,Cancer,other,Bengaluru,,false,heart disease,Candidate for further evaluation
+PAT-1065,Amit More,70,Cancer,male,Nagpur,,false,kidney disease,Family counselling completed
+PAT-1066,Riya Mishra,66,Cancer,male,Pune,,true,heart disease; smoker,Candidate for further evaluation
+PAT-1067,Aadhya Shinde,37,Cancer,female,Chennai,6.3,false,chemotherapy history,Family counselling completed
+PAT-1068,Ishaan Singh,54,Cancer,male,Mumbai,,false,hypertension,Oncology follow-up ongoing
+PAT-1069,Rahul Patil,39,Cancer,male,Mumbai,7.4,false,heart disease,Needs imaging update before enrollment
+PAT-1070,Reyansh Shaikh,68,Cancer,female,Chennai,5.6,false,hypertension,Requires tumor board review
+PAT-1071,Atharv Gupta,61,Cancer,male,Hyderabad,7.2,false,heart disease,Requires tumor board review
+PAT-1072,Aditya Mishra,68,Cancer,other,Bengaluru,5.4,false,hypertension,Oncology follow-up ongoing
+PAT-1073,Neha Mishra,74,Cancer,male,Chennai,7.0,false,,Candidate for further evaluation
+PAT-1074,Aarav Khan,55,Cancer,male,Ahmedabad,8.7,false,heart disease,Family counselling completed
+PAT-1075,Sai Nair,65,Cancer,female,Nagpur,6.8,false,kidney disease,Requires tumor board review
+PAT-1076,Karan Singh,41,Cancer,female,Bengaluru,7.9,false,hypertension,Oncology follow-up ongoing
+PAT-1077,Saanvi Shinde,35,Cancer,female,Bengaluru,6.3,false,chemotherapy history,Candidate for further evaluation
+PAT-1078,Anika Patil,57,Cancer,male,Pune,5.9,false,kidney disease,Family counselling completed
+PAT-1079,Ravi Reddy,52,Cancer,male,Pune,6.1,false,smoker,Needs imaging update before enrollment
+PAT-1080,Diya Reddy,59,Cancer,other,Chennai,6.6,false,chemotherapy history,Family counselling completed
+PAT-1081,Ishaan Pawar,40,Cancer,male,Pune,7.7,false,hypertension,Requires tumor board review
+PAT-1082,Reyansh Kulkarni,71,Cancer,female,Hyderabad,7.8,false,kidney disease,Oncology follow-up ongoing
+PAT-1083,Karan Kulkarni,42,Cancer,male,Chennai,,true,kidney disease; smoker,Oncology follow-up ongoing
+PAT-1084,Vivaan Iyer,42,Cancer,other,Delhi,7.4,false,,Needs imaging update before enrollment
+PAT-1085,Atharv Reddy,54,Cancer,female,Chennai,,true,heart disease; smoker,Oncology follow-up ongoing
+PAT-1086,Aadhya Reddy,28,Cancer,other,Mumbai,,false,chemotherapy history,Requires tumor board review
+PAT-1087,Vihaan Iyer,72,Cancer,female,Bengaluru,7.9,false,heart disease,Needs imaging update before enrollment
+PAT-1088,Myra Pawar,60,Cancer,other,Mumbai,7.3,false,smoker,Candidate for further evaluation
+PAT-1089,Amit Singh,34,Cancer,male,Delhi,7.1,true,heart disease; smoker,Needs imaging update before enrollment
+PAT-1090,Saanvi Pawar,26,Cancer,male,Hyderabad,,false,heart disease,Requires tumor board review
+PAT-1091,Priya Joshi,58,AIDS,other,Bengaluru,6.2,false,tuberculosis history,Requires viral load follow-up
+PAT-1092,Aditya Sharma,28,AIDS,female,Hyderabad,6.2,false,anemia,Immunology review advised
+PAT-1093,Kiara Iyer,49,AIDS,female,Pune,6.7,false,anemia,ART adherence reported as good
+PAT-1094,Aditya Verma,61,AIDS,other,Mumbai,7.9,false,anemia,Requires viral load follow-up
+PAT-1095,Saanvi Nair,59,AIDS,female,Hyderabad,5.4,false,hepatitis B,Regular infectious disease follow-up ongoing
+PAT-1096,Diya Khan,39,AIDS,female,Pune,7.5,false,hepatitis B,Regular infectious disease follow-up ongoing
+PAT-1097,Karan Iyer,20,AIDS,female,Pune,5.8,false,hepatitis B,ART adherence reported as good
+PAT-1098,Amit Iyer,47,AIDS,female,Mumbai,5.5,false,hepatitis B,ART adherence reported as good
+PAT-1099,Reyansh Joshi,53,AIDS,male,Hyderabad,,false,,Stable on current treatment plan
+PAT-1100,Neha Verma,63,AIDS,male,Hyderabad,,false,,ART adherence reported as good
+PAT-1101,Ira Gupta,59,AIDS,male,Nagpur,7.7,false,anemia,Regular infectious disease follow-up ongoing
+PAT-1102,Saanvi Verma,47,AIDS,other,Delhi,6.1,false,hypertension,Requires viral load follow-up
+PAT-1103,Meera Singh,35,AIDS,female,Chennai,7.7,false,,Immunology review advised
+PAT-1104,Karan Mishra,55,AIDS,other,Nagpur,7.5,false,hepatitis B,Stable on current treatment plan
+PAT-1105,Rahul Iyer,42,AIDS,female,Chennai,7.5,false,tuberculosis history,Requires viral load follow-up
+PAT-1106,Meera Khan,20,AIDS,female,Nagpur,7.0,false,hepatitis B,Requires viral load follow-up
+PAT-1107,Saanvi Sharma,26,AIDS,other,Chennai,,false,hepatitis B,Regular infectious disease follow-up ongoing
+PAT-1108,Aarav Jadhav,44,AIDS,other,Delhi,5.1,false,anemia,Regular infectious disease follow-up ongoing
+PAT-1109,Ravi Singh,39,AIDS,other,Ahmedabad,7.8,false,hepatitis B,ART adherence reported as good
+PAT-1110,Sara Singh,33,AIDS,other,Hyderabad,7.9,false,hepatitis B,ART adherence reported as good
+PAT-1111,Ira Yadav,62,AIDS,female,Mumbai,5.0,false,anemia,Regular infectious disease follow-up ongoing
+PAT-1112,Arjun Verma,51,AIDS,female,Delhi,5.4,true,hepatitis B; smoker,Requires viral load follow-up
+PAT-1113,Saanvi Mishra,27,AIDS,male,Nagpur,6.8,false,,Regular infectious disease follow-up ongoing
+PAT-1114,Suresh Pawar,61,AIDS,other,Delhi,5.1,false,hypertension,Regular infectious disease follow-up ongoing
+PAT-1115,Pooja Joshi,47,AIDS,female,Bengaluru,,false,,Stable on current treatment plan
+PAT-1116,Diya Mishra,36,AIDS,other,Hyderabad,5.0,false,hepatitis B,Stable on current treatment plan
+PAT-1117,Meera Sharma,56,AIDS,other,Nagpur,7.4,false,tuberculosis history,Immunology review advised
+PAT-1118,Krishna Kulkarni,57,AIDS,female,Delhi,6.8,false,,Regular infectious disease follow-up ongoing
+PAT-1119,Vivaan Mishra,41,AIDS,other,Delhi,,false,hepatitis B,Requires viral load follow-up
+PAT-1120,Neha Iyer,41,AIDS,other,Hyderabad,7.4,false,hepatitis B,Immunology review advised
