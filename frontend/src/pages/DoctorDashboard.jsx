@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import { addPatient, getPatients } from "../services/patientService";
-import { getTrialMatches, getTrials } from "../services/trialService";
+import { getTrialMatches, getTrials, deleteTrial } from "../services/trialService";
 import { createReport, getReports } from "../services/reportService";
 import { getUsers } from "../services/userService";
 import RoleSidebar from "../components/RoleSidebar";
@@ -55,6 +55,27 @@ export default function DoctorDashboard() {
       console.error("LOAD DASHBOARD ERROR:", error);
     }
   };
+
+  const handleDeleteTrial = async (trialId) => {
+  try {
+    const confirmDelete = window.confirm("Are you sure you want to delete this trial?");
+    if (!confirmDelete) return;
+
+    await deleteTrial(trialId);
+
+    // clear selected trial if deleted
+    if (selectedTrial === trialId) {
+      setSelectedTrial("");
+      setMatches([]);
+    }
+
+    await loadData();
+    alert("Trial deleted successfully");
+  } catch (error) {
+    console.error("DELETE TRIAL ERROR:", error);
+    alert("Failed to delete trial");
+  }
+};
 
   const handleChange = (e) => {
     const { name, value, checked, type } = e.target;
@@ -348,12 +369,29 @@ export default function DoctorDashboard() {
                             <p>{trial.requiredLocation}</p>
                           </div>
 
-                          <button
-                            className="mini-action-btn"
-                            onClick={() => handleCheckMatches(trial._id)}
-                          >
-                            Check Eligibility
-                          </button>
+                         <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
+  <button
+    className="mini-action-btn"
+    onClick={() => handleCheckMatches(trial._id)}
+  >
+    Check Eligibility
+  </button>
+
+  <button
+    onClick={() => handleDeleteTrial(trial._id)}
+    style={{
+      padding: "10px 14px",
+      border: "none",
+      borderRadius: "8px",
+      background: "#ef4444",
+      color: "#fff",
+      cursor: "pointer",
+      fontWeight: "600"
+    }}
+  >
+    Delete
+  </button>
+</div>
                         </div>
                       ))}
                     </div>

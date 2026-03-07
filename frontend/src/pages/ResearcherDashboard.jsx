@@ -24,8 +24,14 @@ export default function ResearcherDashboard() {
   });
 
   useEffect(() => {
+  loadData();
+
+  const interval = setInterval(() => {
     loadData();
-  }, []);
+  }, 5000);
+
+  return () => clearInterval(interval);
+}, []);
 
   const loadData = async () => {
     try {
@@ -194,7 +200,7 @@ export default function ResearcherDashboard() {
 
             <div className="researcher-right">
               <MyTrialsTable trials={trials} reports={reports} />
-              <RecruitmentChart reports={reports} />
+              <RecruitmentChart reports={reports} trials={trials} />
             </div>
           </div>
         </div>
